@@ -113,7 +113,7 @@ fun JetpackReportsScreen(
                         }
                         
                         CircularProgressIndicator(
-                            progress = { (profitMargin / 100f).coerceIn(0f, 1f).toFloat() },
+                            progress = (profitMargin.toFloat() / 100f).coerceIn(0f, 1f),
                             modifier = Modifier.size(40.dp),
                             color = Color(0xFF4CAF50),
                             strokeWidth = 6.dp

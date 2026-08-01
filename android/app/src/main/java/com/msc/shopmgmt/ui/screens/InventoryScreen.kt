@@ -2,6 +2,8 @@ package com.msc.shopmgmt.ui.screens
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -133,7 +135,7 @@ fun JetpackInventoryScreen(
                                 .fillParentMaxHeight(0.6f)
                                 .fillMaxWidth()
                         ) {
-                            Icon(Icons.Default.Warning, contentDescription = "Warning", size = 48.dp, tint = Color.Gray)
+                            Icon(Icons.Default.Warning, contentDescription = "Warning", modifier = Modifier.size(48.dp), tint = Color.Gray)
                             Spacer(modifier = Modifier.height(8.dp))
                             Text("No products in directory match conditions", color = Color.Gray)
                         }
@@ -263,7 +265,7 @@ fun JetpackInventoryScreen(
             onDismissRequest = { showFormDialog = false },
             title = { Text(if (editingProduct != null) "Update Product Specs" else "Register New Stock SKU") },
             text = {
-                Column(modifier = androidx.compose.foundation.rememberScrollState().fillMaxWidth()) {
+                Column(modifier = Modifier.verticalScroll(rememberScrollState()).fillMaxWidth()) {
                     OutlinedTextField(
                         value = formName,
                         onValueChange = { formName = it },

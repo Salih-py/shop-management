@@ -2,6 +2,8 @@ package com.msc.shopmgmt.ui.screens
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -196,7 +198,7 @@ fun SimpleKhataScreen(
                 onDismissRequest = { showRepayDialog = false },
                 title = { Text("Repay Account Ledger") },
                 text = {
-                    Column(modifier = androidx.compose.foundation.rememberScrollState().fillMaxWidth()) {
+                    Column(modifier = Modifier.verticalScroll(rememberScrollState()).fillMaxWidth()) {
                         Text("Customer: ${customer.name}", fontWeight = FontWeight.Bold)
                         Text("Cell phone: ${customer.phone}", style = MaterialTheme.typography.bodySmall)
 

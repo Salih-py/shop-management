@@ -251,7 +251,7 @@ fun JetpackBillingScreen(
                             verticalArrangement = Arrangement.Center,
                             horizontalAlignment = Alignment.CenterHorizontally
                         ) {
-                            Icon(Icons.Default.ShoppingCart, contentDescription = "Basket", size = 48.dp, tint = Color.LightGray)
+                            Icon(Icons.Default.ShoppingCart, contentDescription = "Basket", modifier = Modifier.size(48.dp), tint = Color.LightGray)
                             Spacer(Modifier.height(8.dp))
                             Text("Shopping cart is empty", color = Color.Gray, style = MaterialTheme.typography.bodyMedium)
                             Text("Use search above to list products", color = Color.Gray, style = MaterialTheme.typography.bodySmall)
@@ -483,7 +483,7 @@ fun JetpackBillingScreen(
                             horizontalAlignment = Alignment.CenterHorizontally,
                             modifier = Modifier.fillMaxWidth()
                         ) {
-                            Icon(Icons.Default.ThumbUp, contentDescription = "QR Code Scanner Mock", size = 80.dp, tint = MaterialTheme.colorScheme.primary)
+                            Icon(Icons.Default.ThumbUp, contentDescription = "QR Code Scanner Mock", modifier = Modifier.size(80.dp), tint = MaterialTheme.colorScheme.primary)
                             Spacer(modifier = Modifier.height(8.dp))
                             Text("UPI Dynamic Settlement Bridge active", style = MaterialTheme.typography.bodySmall, fontWeight = FontWeight.Bold)
                         }
@@ -537,7 +537,7 @@ fun JetpackBillingScreen(
                     modifier = Modifier.padding(16.dp),
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
-                    Icon(Icons.Default.CheckCircle, contentDescription = "Success", size = 48.dp, tint = Color(0xFF4CAF50))
+                    Icon(Icons.Default.CheckCircle, contentDescription = "Success", modifier = Modifier.size(48.dp), tint = Color(0xFF4CAF50))
                     Spacer(Modifier.height(12.dp))
                     Text("Payment Recorded!", fontWeight = FontWeight.Bold, style = MaterialTheme.typography.titleLarge)
                     Text("Invoice fully synced to Room SQLite", style = MaterialTheme.typography.bodySmall)
