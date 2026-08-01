@@ -1,0 +1,6 @@
+{
+  "name": "Shop Management System",
+  "description": "An interactive Material Design 3 Android prototype for the Shop Management System with Billing, Stock control, Khata manager, and Reports.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

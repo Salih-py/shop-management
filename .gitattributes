@@ -1,0 +1,21 @@
+# Auto-detect text files and perform LF normalization
+* text=auto eol=lf
+
+# Explicitly declare binary files to prevent line ending conversion & corruption
+*.jar binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.keystore binary
+*.jks binary
+*.so binary
+*.aar binary
+
+# Shell scripts must have LF
+gradlew text eol=lf
+*.sh text eol=lf
+
+# Windows scripts must have CRLF
+*.bat text eol=crlf
+*.cmd text eol=crlf
